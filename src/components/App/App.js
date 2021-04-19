@@ -1,5 +1,6 @@
 import react from 'react';
 import './App.css';
+import Instructions from '../Instructions/Instructions.js';
 
 const displayEmojiName = event => alert(event.target.id);
 
@@ -25,6 +26,7 @@ function App() {
         <div className='container'>
             <h1>Hello world!</h1>
             {displayAction && <p>Check out!</p>}
+            <Instructions/>
             <ul>
                 {emojis.map(emoji => (
                 <li key={emoji.name}>
@@ -35,7 +37,6 @@ function App() {
                 }
             </ul>
         </div>
-
     )
 }
 
